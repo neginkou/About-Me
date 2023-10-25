@@ -26,6 +26,7 @@ for (let i = 0; i < questions.length; i++) {
       alert("Correct! You got it right.");
     } else {
       alert("Sorry, that's not correct.");
+      break;
     }
   }
 }
