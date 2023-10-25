@@ -1,0 +1,23 @@
+h1 {
+  color: rgb(216, 16, 73);
+  text-align: center;
+  background-color: rgb(252, 201, 229);
+  padding-bottom: 2ch;
+  top: 2ch;
+  font-family: cursive
+}
+
+body {
+  font-size: large;
+  text-align: center;
+  text-decoration: solid;
+  background-color: rgb(248, 165, 134);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+footer {
+  font-size: larger;
+  background-color: rgb(162, 152, 228);
+}
