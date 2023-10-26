@@ -14,7 +14,6 @@ let questions = [
 
 let answers = ["Yes", "Yes", "No", "Yes", "Yes"];
 
-
 function checkAnswer(userInput, correctAnswer) {
   return userInput.toLowerCase() === correctAnswer.toLowerCase();
 }
@@ -30,7 +29,8 @@ for (let i = 0; i < questions.length; i++) {
     }
   }
 }
-const correctAnswers = ["apple", "pamegranate", "sour cherry"];
+
+const correctAnswers = ["apple", "pomegranate", "sour cherry"];
 let attempts2 = 6;
 let guessedCorrectly2 = false;
 
@@ -45,6 +45,7 @@ while (attempts2 > 0) {
   }
   attempts2--;
 }
+
 if (!guessedCorrectly2) {
   alert("You've run out of attempts. The correct answers are: " + correctAnswers.join(", "));
 }
@@ -72,19 +73,7 @@ while (attempts > 0) {
 
 if (isCorrect) {
   alert(`Congratulations! You guessed my age correctly, which is ${myAge}.`);
-} else {
-  alert(`Sorry, you've used up all your attempts. My age is ${myAge}.`);
 }
-let correctCount = 0;
-for (let i = 0; i < questions.length; i++) {
-  const userAnswer = prompt(questions[i]);
-
-  if (userAnswer !== null && userAnswer.toLowerCase() === correctAnswers[i].toLowerCase()) {
-    correctCount++;
-  }
-}
-alert(`You got ${correctCount} out of 7 questions correct!`);
-
-//Final message
+// Final message
 const finalMessage = `Thank you for learning more about me, ${userName}. I hope you enjoyed the game!`;
 alert(finalMessage);
