@@ -1,5 +1,5 @@
 // Welcome user
-const userName = prompt("Welcome! Please enter your name:");
+const userName = prompt("Welcome, Friend! Please enter your name:");
 const welcomeMessage = `Welcome to Negin's Life Journey, ${userName}! Let's get to know each other better.`;
 alert(welcomeMessage);
 
@@ -14,14 +14,14 @@ let questions = [
 
 let answers = ["Yes", "Yes", "No", "Yes", "Yes"];
 
-function checkAnswer(userInput, correctAnswer) {
+function checkCorrectAnswer(userInput, correctAnswer) {
   return userInput.toLowerCase() === correctAnswer.toLowerCase();
 }
 
 for (let i = 0; i < questions.length; i++) {
   const userResponse = prompt(questions[i]);
   if (userResponse !== null) {
-    if (checkAnswer(userResponse, answers[i])) {
+    if (checkCorrectAnswer(userResponse, answers[i])) {
       alert("Correct! You got it right.");
     } else {
       alert("Sorry, that's not correct.");
@@ -35,7 +35,7 @@ let attempts2 = 6;
 let guessedCorrectly2 = false;
 
 while (attempts2 > 0) {
-  const userAnswer = prompt("What is my favorite fruit, Enter your guess:");
+  const userAnswer = prompt("What is my favorite fruit, Enter your guess , Please!:");
   if (correctAnswers.includes(userAnswer.toLowerCase())) {
     alert("Correct! That's one of the answers.");
     guessedCorrectly2 = true;
