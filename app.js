@@ -1,10 +1,10 @@
 // Welcome user
-function welcomeMessage(){
+function welcome() {
 const userName = prompt("Welcome! Please enter your name:");
 const welcomeMessage = `Welcome to Negin's Life Journey, ${userName}! Let's get to know each other better.`;
 alert(welcomeMessage);
 }
-welcomeMessage();
+welcome();
 // questions and answers
 function quiz() {
   let questions = [
@@ -33,8 +33,8 @@ for (let i = 0; i < questions.length; i++) {
   }
   alert(`you got ${correctAnswers} out of ${questions.length}question correct`);
 }
-quiz()
 }
+quiz();
 
 // function checkAnswer(userInput, correctAnswer) {
 //   return userInput.toLowerCase() === correctAnswer.toLowerCase();
@@ -83,7 +83,7 @@ function guessage() {
       attempts--;
     } else {
       isCorrect = true;
-      break;
+
     }
   }
   if (isCorrect) {
