@@ -1,10 +1,7 @@
 // Welcome user
-function welcomeMessage() {
-  const userName = prompt("Welcome! Please enter your name:");
-  const welcomeMessage = `Welcome to Negin's Life Journey, ${userName}! Let's get to know each other better.`;
-  alert(welcomeMessage);
-}
-welcomeMessage();
+const userName = prompt("Welcome! Please enter your name:");
+const welcomeMessage = `Welcome to Negin's Life Journey, ${userName}! Let's get to know each other better.`;
+alert(welcomeMessage);
 
 // questions and answers
 function quiz() {
@@ -16,14 +13,17 @@ function quiz() {
     "Am I transitioning to a career as a software developer? (Yes/No)",
   ];
 
-  let answers = ["Yes", "Yes", "No", "Yes", "Yes"];
-  let correctAnswers = 0;
+let answers = ["Yes", "Yes", "No", "Yes", "Yes"];
 
-  for (let i = 0; i < questions.length; i++) {
-    const userAnswer = prompt(questions[i]);
-    if (userAnswer && userAnswer.toLowerCase() === answers[i].toLocaleLowerCase()) {
-      correctAnswers++;
-      alert('Correct, You got it right.');
+function checkAnswer(userInput, correctAnswer) {
+  return userInput.toLowerCase() === correctAnswer.toLowerCase();
+}
+
+for (let i = 0; i < questions.length; i++) {
+  const userResponse = prompt(questions[i]);
+  if (userResponse !== null) {
+    if (checkAnswer(userResponse, answers[i])) {
+      alert("Correct! You got it right.");
     } else {
       alert("Sorry, that's not correct");
     }
@@ -45,17 +45,17 @@ function favoritfruit() {
   let attempts2 = 6;
   let guessedCorrectly2 = false;
 
-  while (attempts2 > 0) {
-    const userAnswer = prompt("What is my favorite fruit, Enter your guess:");
-    if (correctAnswers.includes(userAnswer.toLowerCase())) {
-      alert("Correct! That's one of the answers.");
-      guessedCorrectly2 = true;
-      break;
-    } else {
-      alert("Incorrect. Try again.");
-    }
-    attempts2--;
+while (attempts2 > 0) {
+  const userAnswer = prompt("What is my favorite fruit, Enter your guess:");
+  if (correctAnswers.includes(userAnswer.toLowerCase())) {
+    alert("Correct! That's one of the answers.");
+    guessedCorrectly2 = true;
+    break;
+  } else {
+    alert("Incorrect. Try again.");
   }
+  attempts2--;
+}
 
   if (!guessedCorrectly2) {
     alert("You've run out of attempts. The correct answers are: " + correctAnswers.join(", "));
